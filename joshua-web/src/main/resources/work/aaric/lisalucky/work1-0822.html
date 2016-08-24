@@ -1,39 +1,88 @@
 <!DOCTYPE html>
-<html lang="zh-CN" >
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-        <link rel="stylesheet" href="../websrc/css/semantic.css"/>
+    <link rel="stylesheet" href="../../../websrc/css/semantic.css"/>
 </head>
 <body>
-    <h1>标题</h1>
+<h1>标题</h1>
+<div class="item">
     <div class="ui checkbox">
         <input type="checkbox" name="example">
         <label>选项一</label>
     </div>
+</div>
+<div class="item">
     <div class="ui checkbox">
         <input type="checkbox" name="example">
         <label>选项二</label>
     </div>
+</div>
+<div class="item">
     <div class="ui checkbox">
         <input type="checkbox" name="example">
         <label>选项三</label>
     </div>
+</div>
+<div class="item">
     <div class="ui checkbox">
         <input type="checkbox" name="example">
         <label>选项四</label>
     </div>
+</div>
+<div class="item">
     <div class="ui checkbox">
         <input type="checkbox" name="example">
         <label>选项五</label>
     </div>
-    <button id="select-all" class="ui basic button"> 全选 </button>
-    <button id="deselect-all" class="ui basic button"> 反选 </button>
-    <button id="clear-all" class="ui basic button"> 清除 </button>
-    <button class="ui toggle button">Vote</button>
+</div>
+<button id="select-all" class="ui basic button"> 全选</button>
+<button id="deselect-all" class="ui basic button"> 反选</button>
+<button id="clear-all" class="ui basic button"> 清除</button>
 
-    <script src="../websrc/js/semantic.js"></script>
-    <script src="../websrc/js/jquery.js"></script>
+
+
+
+<div class="ui modal">
+    <i class="close icon"></i>
+    <div class="header">
+       注意
+    </div>
+    <div class="image content">
+        <div class="description">
+            <div class="ui header">请在下面输入框输入内容</div>
+                 <div class="ui fluid icon input">
+                     <input type="text" placeholder="比如……你喜欢的动物……">
+                 </div>
+        </div>
+    </div>
+    <div class="actions">
+
+        <div class="ui black deny button">
+            确定
+        </div>
+    </div>
+</div>
+
+
+<script src="../../../websrc/js/jquery.js"></script>
+<script src="../../../websrc/js/semantic.js"></script>
+
+<script>
+    $("#select-all").click(function () {
+        $(".ui.checkbox").checkbox("check");
+    });
+    $("#deselect-all").click(function () {
+        $(".ui.checkbox").checkbox("toggle");
+    });
+    $("#clear-all").click(function () {
+        $(".ui.checkbox").checkbox("uncheck");
+    });
+
+    $('.ui.modal').modal('show');
+</script>
+
 
 </body>
 </html>

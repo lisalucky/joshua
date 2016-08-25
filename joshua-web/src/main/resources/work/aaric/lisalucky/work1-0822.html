@@ -10,39 +10,36 @@
 <div class="item">
     <div class="ui checkbox">
         <input type="checkbox" name="example">
-        <label>选项一</label>
+        <label id="option1" class="option" style="cursor: pointer">选项一</label>
     </div>
 </div>
 <div class="item">
     <div class="ui checkbox">
         <input type="checkbox" name="example">
-        <label>选项二</label>
+        <label id="option2" class="option" style="cursor: pointer">选项二</label>
     </div>
 </div>
 <div class="item">
     <div class="ui checkbox">
         <input type="checkbox" name="example">
-        <label>选项三</label>
+        <label id="option3" class="option" style="cursor: pointer">选项三</label>
     </div>
 </div>
 <div class="item">
     <div class="ui checkbox">
         <input type="checkbox" name="example">
-        <label>选项四</label>
+        <label id="option4" class="option" style="cursor: pointer">选项四</label>
     </div>
 </div>
 <div class="item">
     <div class="ui checkbox">
         <input type="checkbox" name="example">
-        <label>选项五</label>
+        <label id="option5" class="option" style="cursor: pointer">选项五</label>
     </div>
 </div>
 <button id="select-all" class="ui basic button"> 全选</button>
 <button id="deselect-all" class="ui basic button"> 反选</button>
 <button id="clear-all" class="ui basic button"> 清除</button>
-
-
-
 
 <div class="ui modal">
     <i class="close icon"></i>
@@ -80,7 +77,12 @@
         $(".ui.checkbox").checkbox("uncheck");
     });
 
-    $('.ui.modal').modal('show');
+    $(".option").click(function (option) {
+        $(".ui.modal").modal("show");
+        alert("rrrr");
+    });
+
+
 </script>
 
 
